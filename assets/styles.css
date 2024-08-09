@@ -1,4 +1,16 @@
 /* styles.css */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    border: solid #333 5px;
+}
 
 body {
     font-family: Arial, sans-serif;
