@@ -9,18 +9,20 @@
 <body>
     <div class="container">
         <h1>📝 To-Do List Tracker</h1>
-        <input type="text" placeholder="Enter your task here ✍️" id="task">
-        <button id="add">➕ Add Task</button> 
-        <button id="eventWizardButton">🧙‍♂️ Event Wizard</button> <!-- New button added here -->
-        <button id="clearEventsButton">🗑️ Clear Events</button> <!-- Clear Events button added here --> 
-        <button id="clearAllButton">🗑️ Clear All</button> <!-- Clear All button added here -->
+        <p>👉 Please press the Event Wizard button to list your To-Dos.</p> <!-- Instruction added here -->
+        <button id="eventWizardButton">🧙‍♂️ Event Wizard</button> <!-- Event Wizard button with emoji -->
+        <button id="clearEventsButton">🗑️ Clear Events</button> <!-- Clear Events button with emoji --> 
         <ul id="tasks"></ul> 
         <script src="assets/js/listScript.js"></script>
+        <script>
+            document.getElementById('eventWizardButton').addEventListener('click', function() {
+                window.location.href = 'eventWizard.html'; // Redirect to eventWizard.html
+            });
+        </script>
     </div>
-
 </body> 
 <main> 
-    <h4>This To-Do list will list your tasks and show them below 📋</h4>
-    <h1>Welcome to your To-Do List 📝</h1> 
+    <h4>📋 This To-Do list will list your tasks and show them below</h4>
+    <h1>📝 Welcome to your To-Do List</h1> 
 </main>
 </html>
