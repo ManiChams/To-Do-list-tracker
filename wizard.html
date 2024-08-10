@@ -8,13 +8,14 @@
 </head> 
 
     <body>
+        <p><a data-open="error-modal"></a></p>
         <div class="container">
             <h1> To-Do List Tracker</h1>
             <div class="eventName">
                 <input type="text" placeholder="Event Name" id="eventName">
             </div>
             <div class="eventDate">
-                <input type="text" placeholder="Event Date" id="eventDate">
+                <input type="date" id="eventDate">
             </div>
             <div class="eventDesc">
                 <input type="text" placeholder="Event Description" id="eventDesc">
@@ -22,8 +23,22 @@
             <div class = "submitButton">
                 <button type="button" id="submitButton">Submit Task</button>
             </div>
+            <div class = "indexButton">
+                <button type="button" id="indexButton">Back to Main Page</button>
+            </div>
+            <div class="tiny reveal" id="error-modal" data-reveal>
+                <h1>Please fill out all fields!</h1>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                
+            </div> 
         </div>
+           
+        
         <script src="assets/js/wizardScript.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+        
     </body>
 </html>    
