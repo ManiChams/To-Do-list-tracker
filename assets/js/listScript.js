@@ -33,7 +33,7 @@ function getTasksFromLocalStorage() {
 
 function renderTask(task) {
     const li = document.createElement('li');
-    li.innerHTML = `<strong>Name:</strong> ${task.name} <br> <strong>Date:</strong> ${task.date} <br> <strong>Description:</strong> ${task.description}`;
+    li.innerHTML = `<strong>Name:</strong> ${task.name} <br> <strong>Date:</strong> ${task.date} <br> <strong>Description:</strong> ${task.desc}`;
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
@@ -43,7 +43,8 @@ function renderTask(task) {
 
     li.appendChild(deleteButton);
     tasksList.appendChild(li);
-}
+} 
+
 
 function removeTask(taskId) {
     let tasks = getTasksFromLocalStorage();
