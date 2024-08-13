@@ -22,27 +22,27 @@ indexButton.addEventListener('click', function(){
 });
 
 //updates the event's name when the field is changed
-eventName.addEventListener('change', function(event){
+/*eventName.addEventListener('change', function(event){
     if(eventName.value !== ''){
         newEvent.name = eventName.value;
     }
     //console.log(eventName.value);
     //console.log(newEvent.name);
-});
+});*/
 
 //updates the event's date when the field is changed
-eventDate.addEventListener('change', function(event){
+/*eventDate.addEventListener('change', function(event){
     if(eventDate.value !== ''){
         newEvent.date = eventDate.value;
     }
-});
+});*/
 
 //updates the event's description when the field is changed
-eventDesc.addEventListener('change', function(event){
+/*eventDesc.addEventListener('change', function(event){
     if(eventDesc.value !== ''){
         newEvent.desc = eventDesc.value;
     }
-});
+});*/
 
 //when the submit button is clicked, the updateEvent function is called
 submitButton.addEventListener('click', function(event){
@@ -70,6 +70,7 @@ function validateForm(eName, eDate, eDesc){
 
 //given an object (called newEvent), this function adds the object to eventArray and stores it in local storage
 function recordEvent(newEvent){
+    eventArray = JSON.parse(localStorage.getItem('eventArray')) || [];
     eventArray.push(newEvent);
     localStorage.setItem('eventArray', JSON.stringify(eventArray));
 }
