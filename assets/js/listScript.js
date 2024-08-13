@@ -52,6 +52,8 @@ function renderTask(task) {
     const deleteButton = document.createElement('button');
     // Set the text content of the delete button
     deleteButton.textContent = '❌ Delete';
+    
+    deleteButton.setAttribute('id', 'deleteButton');
     // Add an event listener to the delete button to handle task removal
     deleteButton.addEventListener('click', () => {
         removeTask(li);

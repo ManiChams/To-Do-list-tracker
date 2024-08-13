@@ -50,6 +50,18 @@ button {
     cursor: pointer;
 }
 
+#deleteButton {
+/*    position: fixed;
+    top: 75%;
+    right: 40%; how to position this piece to stay in container? */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 button:hover {
     background-color: #0056b3;
 }
