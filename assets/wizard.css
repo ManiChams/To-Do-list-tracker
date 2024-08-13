@@ -36,6 +36,18 @@ button {
     cursor: pointer;
 }
 
+#deleteButton {
+    position: fixed;
+    right: 0%;
+    top: 0%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 #submitButton {
     padding: 10px 20px;
     background-color: #007bff;
