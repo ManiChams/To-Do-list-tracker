@@ -51,9 +51,6 @@ button {
 }
 
 #deleteButton {
-/*    position: fixed;
-    top: 75%;
-    right: 40%; how to position this piece to stay in container? */
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -61,7 +58,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     display: block;
-    margin: 10px 10px;
+    margin: 10px 20px 10px 10px;
 }
 
 button:hover {
@@ -90,4 +87,25 @@ footer {
 .copy {
     text-align: center;
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    input[type="text"] {
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    button {
+        width: 100%;
+    }
+    
 }
