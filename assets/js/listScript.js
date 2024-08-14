@@ -56,7 +56,7 @@ function renderTask(task) {
     deleteButton.setAttribute('id', 'deleteButton');
     // Add an event listener to the delete button to handle task removal
     deleteButton.addEventListener('click', () => {
-        removeTask(li);
+        removeTask(li, task);
     });
 
     // Append the delete button to the task item
@@ -66,27 +66,15 @@ function renderTask(task) {
 }
 
 // Function to remove a task from the list and local storage
-function removeTask(taskElement) {
+function removeTask(taskElement, task) {
+    let tasks = getTasksFromLocalStorage();
+    tasks.splice(tasks.indexOf(task), 1);
+    localStorage.setItem('eventArray', JSON.stringify(tasks));
     tasksList.removeChild(taskElement);
-    saveTasks();
 }
 
 // Function to clear all tasks from the list and local storage
 function clearAllTasks() {
     tasksList.innerHTML = '';
-    saveTasks();
-}
-
-// Function to save tasks to local storage
-function saveTasks() {
-    const tasks = [];
-    tasksList.querySelectorAll('li').forEach(taskElement => {
-        const task = {
-            name: taskElement.querySelector('strong:nth-child(1)').textContent.replace('📝 Name:', '').trim(),
-            date: taskElement.querySelector('strong:nth-child(2)').textContent.replace('📅 Date:', '').trim(),
-            desc: taskElement.querySelector('strong:nth-child(3)').textContent.replace('🗒️ Description:', '').trim()
-        };
-        tasks.push(task);
-    });
-    localStorage.setItem('eventArray', JSON.stringify(tasks));
+    localStorage.setItem('eventArray', '');
 }
