@@ -1,24 +1,26 @@
 # To-Do List Tracker
 
+https://manichams.github.io/To-Do-list-tracker/
+
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+- To-Do List Tracker is a simple website for storing and reading events using the browser's Local Storage. Instead of having to remember these events (and risk forgetting them in the process), this project allows the user to easily write these events down and check them at a later point in time.
 
-- What was your motivation?
-    
-    Less confusion and more productivity. 
-
-- Why did you build this project?
-    
-    Have a visible list of objectives and tasks.
-
-- What problem does it solve?
-
-    Instead of having to remember my tasks and risk forgetting to accomplish things, I can write it all down and complete it all.
 
 ## Usage
 
-Use this app like just like you would sticky notes, except this is  less sticky. 
+- Follow the link to the event wizard from the main page.
+![unnamed1](https://github.com/user-attachments/assets/26a23687-d2e0-47d0-a0df-f1732d5ad0a1)
+
+- On the event wizard, add the event's name, date, and description.
+![unnamed2](https://github.com/user-attachments/assets/91268a87-dbe4-4a6a-814b-7ddb98125219)
+
+- Click the "Submit Task" button to save the event to the browser's local storage.
+- (Repeat as necessary)
+- Click the "Back to Main Page" button to return to the main page.
+- On the main page, events are shown in the order they were submitted. Events can be deleted individually or all at once.
+
+
 
 ## Credits
 
@@ -66,7 +68,7 @@ SOFTWARE.
 ## Features
 
 Create a custom To-Do list for your needs.
-Add, edit, check off or delete a task.
+Add, edit, or delete tasks at your convenience.
 
 ## How to Contribute
 
