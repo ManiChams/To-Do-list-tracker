@@ -69,12 +69,17 @@ function renderTask(task) {
 function removeTask(taskElement, task) {
     let tasks = getTasksFromLocalStorage();
     tasks.splice(tasks.indexOf(task), 1);
-    localStorage.setItem('eventArray', JSON.stringify(tasks));
+    if(tasks.length === 0) {
+        localStorage.removeItem('eventArray');
+    }
+    else{
+        localStorage.setItem('eventArray', JSON.stringify(tasks));
+    }
     tasksList.removeChild(taskElement);
 }
 
 // Function to clear all tasks from the list and local storage
 function clearAllTasks() {
     tasksList.innerHTML = '';
-    localStorage.setItem('eventArray', '');
+    localStorage.removeItem('eventArray');
 }
