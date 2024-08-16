@@ -14,35 +14,12 @@ const newEvent ={
 };
 
 //eventArray is an array that holds (or will hold) the event objects
-let eventArray = JSON.parse(localStorage.getItem('eventArray')) || [];
+let eventArray = [];
 
 //when the index button is clicked, the user is redirected to the index page
 indexButton.addEventListener('click', function(){
     window.location.href = `index.html`;
 });
-
-//updates the event's name when the field is changed
-/*eventName.addEventListener('change', function(event){
-    if(eventName.value !== ''){
-        newEvent.name = eventName.value;
-    }
-    //console.log(eventName.value);
-    //console.log(newEvent.name);
-});*/
-
-//updates the event's date when the field is changed
-/*eventDate.addEventListener('change', function(event){
-    if(eventDate.value !== ''){
-        newEvent.date = eventDate.value;
-    }
-});*/
-
-//updates the event's description when the field is changed
-/*eventDesc.addEventListener('change', function(event){
-    if(eventDesc.value !== ''){
-        newEvent.desc = eventDesc.value;
-    }
-});*/
 
 //when the submit button is clicked, the updateEvent function is called
 submitButton.addEventListener('click', function(event){
@@ -68,13 +45,17 @@ function validateForm(eName, eDate, eDesc){
         return true;
 }
 
+
 //given an object (called newEvent), this function adds the object to eventArray and stores it in local storage
 function recordEvent(newEvent){
-    eventArray = JSON.parse(localStorage.getItem('eventArray')) || [];
+    if(localStorage.getItem('eventArray') !== null){
+        eventArray = JSON.parse(localStorage.getItem('eventArray')) || [];
+    }
     eventArray.push(newEvent);
     localStorage.setItem('eventArray', JSON.stringify(eventArray));
 }
 
+//clears the inputs
 function clearForms(){
     eventName.value = '';
     eventDate.value = '';
